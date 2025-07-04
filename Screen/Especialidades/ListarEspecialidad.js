@@ -16,8 +16,8 @@ export default function ListarEspecialidad({ navigation }) {
 
             <ScrollView style={styles.especialidadesContainer}>
                 {especialidadesEjemplo.map((especialidad) => (
-                    <View key={especialidad.id} style={styles.agendamientoCard}>
-                        <Text style={styles.especialidadTitle}>{agendamiento.Nombre}</Text>
+                    <View key={especialidad.id} style={styles.especialidadCard}>
+                        <Text style={styles.especialidadTitle}>{especialidad.Nombre}</Text>
                         <Text style={styles.especialidadDetail}><Text style={styles.detailLabel}>Id: </Text>{especialidad.Id}</Text>
                         <Text style={styles.especialidadDetail}><Text style={styles.detailLabel}>Nombre: </Text>{especialidad.Nombre}</Text>
                         <Text style={styles.especialidadDetail}><Text style={styles.detailLabel}>Descripción: </Text>{especialidad.Descripcion}</Text>

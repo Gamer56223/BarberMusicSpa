@@ -25,7 +25,7 @@ export default function EditarExcepcionHorarioSucursal({ route, navigation }) {
 
     useEffect(() => {
         if (excepcionhorariosucursalId) {
-            const foundExcepcionHorarioSucursal = excepcionhorariosucursalesEjemplo.find(c => c.id === excepcionhorariosucursalId);
+            const foundExcepcionHorarioSucursal = excepcionhorariosucursalesEjemplo.find(eh => eh.id === excepcionhorariosucursalId);
             if (foundExcepcionHorarioSucursal) {
                 setAgendamiento(foundExcepcionHorarioSucursal);
                 setId(foundExcepcionHorarioSucursal.id);

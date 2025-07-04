@@ -7,6 +7,7 @@ export default function DetalleAgendamiento({ route, navigation }) {
     const { agendamientoId } = route.params;
     const [agendamiento, setAgendamiento] = useState(null);
     const [loading, setLoading] = useState(true);
+
     const agendamientosEjemplo = [
         { id: '1', fecha_hora_inicio: '20/06/2025', fecha_hora_fin: '22/06/2025', precio_final: '$72.000', estado: 'activo', notas_cliente: 'Consulta', notas_internas: 'Paciente con síntomas leves de resfriado.' },
         { id: '2', fecha_hora_inicio: '20/06/2025', fecha_hora_fin: '22/06/2025', precio_final: '35.000', estado: 'activo', notas_cliente: 'Revisión', notas_internas: 'Revisión anual y limpieza.' },
@@ -14,7 +15,7 @@ export default function DetalleAgendamiento({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundCita = agendamientosEjemplo.find(c => c.id === agendamientoId);
+        const foundAgendamiento = agendamientosEjemplo.find(a => a.id === agendamientoId);
         setCita(foundAgendamiento);
         setLoading(false);
     }, [agendamientoId]); 
@@ -50,14 +51,14 @@ export default function DetalleAgendamiento({ route, navigation }) {
             <Text style={[styles.title, {color: '#2c3e50'}]}>Detalle del Agendamiento</Text>
 
             <View style={[styles.detailCard, {backgroundColor: '#FFFFFF', shadowColor: 'rgba(0, 0, 0, 0.1)'}]}>
-                <Text style={[styles.citaName, {color: '#2c3e50'}]}>{cita.Nombre}</Text>
+                <Text style={[styles.agendamientoName, {color: '#2c3e50'}]}>{agendamiento.Nombre}</Text>
                 <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>ID: </Text>{agendamiento.id}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Fecha Hora Inicio: </Text>{cita.fecha_hora_inicio}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Fecha Hora Final: </Text>{cita.fecha_hora_fin}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Precio Final: </Text>{cita.precio_final}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Estado: </Text>{cita.estado}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Notas Cliente: </Text>{cita.notas_cliente}</Text>
-                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Notas Internas: </Text>{cita.notas_internas}</Text>           
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Fecha Hora Inicio: </Text>{agendamiento.fecha_hora_inicio}</Text>
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Fecha Hora Final: </Text>{agendamiento.fecha_hora_fin}</Text>
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Precio Final: </Text>{agendamiento.precio_final}</Text>
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Estado: </Text>{agendamiento.estado}</Text>
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Notas Cliente: </Text>{agendamiento.notas_cliente}</Text>
+                <Text style={[styles.detailText, {color: '#5C6F7F'}]}><Text style={styles.detailLabel}>Notas Internas: </Text>{agendamiento.notas_internas}</Text>           
             </View>
 
             <BotonComponent

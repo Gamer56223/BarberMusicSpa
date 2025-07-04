@@ -26,7 +26,7 @@ export default function EditarAgendamiento({ route, navigation }) {
 
     useEffect(() => {
         if (agendamientoId) {
-            const foundAgendamiento = agendamientosEjemplo.find(c => c.id === agendamientoId);
+            const foundAgendamiento = agendamientosEjemplo.find(a => a.id === agendamientoId);
             if (foundAgendamiento) {
                 setAgendamiento(foundAgendamiento);
                 setId(foundAgendamiento.id);
@@ -76,7 +76,7 @@ export default function EditarAgendamiento({ route, navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.title}>{citaId ? "Editar Agendamiento" : "Crear Nuevo Agendamiento"}</Text>
+            <Text style={styles.title}>{agendamientoId ? "Editar Agendamiento" : "Crear Nuevo Agendamiento"}</Text>
 
             <ScrollView style={styles.formScrollView}>
                 <View style={styles.formCard}>

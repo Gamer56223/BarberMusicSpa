@@ -24,7 +24,7 @@ export default function EditarHorarioSucursal({ route, navigation }) {
 
     useEffect(() => {
         if (horariosucursalId) {
-            const foundHorarioSucursal = horariosucursalesEjemplo.find(c => c.id === horariosucursalId);
+            const foundHorarioSucursal = horariosucursalesEjemplo.find(hs => hs.id === horariosucursalId);
             if (foundHorarioSucursal) {
                 setAgendamiento(foundHorarioSucursal);
                 setId(foundHorarioSucursal.id);
@@ -44,7 +44,7 @@ export default function EditarHorarioSucursal({ route, navigation }) {
 
     const handleSave = () => {
         const horariosucursalData = {
-            id: agendamientoId || new Date().getTime().toString(), // Generar ID si es nueva
+            id: horariosucursalId || new Date().getTime().toString(), // Generar ID si es nueva
             Dia_Semana: dia_semana,
             Hora_Apertura: hora_apertura,
             Hora_Cierre: hora_cierre,

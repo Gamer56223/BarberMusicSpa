@@ -15,7 +15,7 @@ export default function DetalleExcepcionHorarioSucursal({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundDetalleExcepcionHorarioSucursal = detalleexcepcionhorariosucursalesEjemplo.find(c => c.id === detalleexcepcionhorariosucursalId);
+        const foundDetalleExcepcionHorarioSucursal = detalleexcepcionhorariosucursalesEjemplo.find(eh => eh.id === detalleexcepcionhorariosucursalId);
         setCita(foundDetalleExcepcionHorarioSucursal);
         setLoading(false);
     }, [detalleexcepcionhorariosucursalId]); 
@@ -32,7 +32,7 @@ export default function DetalleExcepcionHorarioSucursal({ route, navigation }) {
     if (!detalleexcepcionhorariosucursal) {
         return (
             <SafeAreaView style={[styles.container, {backgroundColor: '#f0f4f8'}]}>
-                <Text style={[styles.title, {color: '#2c3e50'}]}>Detalle del Agendamiento</Text>
+                <Text style={[styles.title, {color: '#2c3e50'}]}>Detalle de la Excepción Horario Sucursal</Text>
                 <View style={[styles.detailCard, {backgroundColor: '#FFFFFF', shadowColor: 'rgba(0, 0, 0, 0.1)'}]}>
                     <Text style={[styles.errorText, {color: 'red'}]}>No se encontraron detalles para esta Excepción de Horario de la Sucursal.</Text>
                     <BotonComponent

@@ -15,7 +15,7 @@ export default function DetalleEspecialidadPersonal({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundEspecialidadPersonal = especialidadespersonalEjemplo.find(c => c.id === especialidadespersonalEjemplo.Id);
+        const foundEspecialidadPersonal = especialidadespersonalEjemplo.find(ep => ep.id === especialidadespersonalEjemplo.Id);
         setCita(foundEspecialidadesPersonal);
         setLoading(false);
     }, [especialidadpersonalId]); 

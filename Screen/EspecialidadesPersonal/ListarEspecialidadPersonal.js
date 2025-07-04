@@ -17,8 +17,8 @@ export default function ListarEspecialidadPersonal({ navigation }) {
 
             <ScrollView style={styles.especialidadespersonalEjemploContainer}>
                 {especialidadespersonalEjemploEjemplo.map((especialidadpersonal) => (
-                    <View key={agendamiento.id} style={styles.agendamientoCard}>
-                        <Text style={styles.especialidadpersonalTitle}>{agendamiento.Nombre}</Text>
+                    <View key={especialidadpersonal.id} style={styles.especialidadpersonalCard}>
+                        <Text style={styles.especialidadpersonalTitle}>{especialidadpersonal.Nombre}</Text>
                         <Text style={styles.especialidadpersonalDetail}><Text style={styles.detailLabel}>Id: </Text>{especialidadpersonal.Id}</Text>
                         <Text style={styles.especialidadpersonalDetail}><Text style={styles.detailLabel}>Especialidad Id: </Text>{especialidadpersonal.Especialidad_Id}</Text>
                         <Text style={styles.especialidadpersonalDetail}><Text style={styles.detailLabel}>Personal Id: </Text>{especialidadpersonal.Fecha_Personal_Id}</Text>
@@ -33,7 +33,7 @@ export default function ListarEspecialidadPersonal({ navigation }) {
                             />
                             <BotonComponent
                                 title="Editar especialidad personal" // Título completo
-                                onPress={() => navigation.navigate("Editaragendamientos", { especialidadpersonalId: especialidadpersonal.id })}
+                                onPress={() => navigation.navigate("Editarespecialidadpersonales", { especialidadpersonalId: especialidadpersonal.id })}
                                 buttonStyle={styles.editButton}
                                 textStyle={styles.buttonText}
                             />

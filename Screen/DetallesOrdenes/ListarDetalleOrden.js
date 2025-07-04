@@ -58,7 +58,7 @@ export default function ListarDetalleOrden({ navigation }) {
             <BotonComponent
                 title="Agendar Nuevo Detalle Ordén" // Título completo
                 onPress={() => { /* navigation.navigate("Crearagendamiento") */ }}
-                buttonStyle={styles.newagendamientoButton}
+                buttonStyle={styles.newdetalleordenButton}
                 textStyle={styles.buttonText}
             />
         </View>

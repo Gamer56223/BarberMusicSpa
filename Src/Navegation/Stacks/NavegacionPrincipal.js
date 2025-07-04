@@ -2,9 +2,9 @@ import { Feather, Ionicons } from "@expo/vector-icons"; // Añadido MaterialComm
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import ConfiguracionesStack from "../Src/Navegation/Stacks/ConfiguracionStack";
-import InicioStack from "../Src/Navegation/Stacks/InicioStack";
-import PerfilesStack from "../Src/Navegation/Stacks/PerfilStack";
+import ConfiguracionesStack from "./../Stacks/ConfiguracionStack";
+import InicioStack from "./../Stacks/InicioStack";
+import PerfilesStack from "./../Stacks/PerfilStack";
 
 const Tab = createBottomTabNavigator();
 

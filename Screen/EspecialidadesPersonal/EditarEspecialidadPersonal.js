@@ -24,7 +24,7 @@ export default function EditarEspecialidadPersonal({ route, navigation }) {
 
     useEffect(() => {
         if (especialidadpersonalId) {
-            const foundEspecialidadPersonal = especialidadespersonalEjemplo.find(c => c.id === especialidadpersonalId);
+            const foundEspecialidadPersonal = especialidadespersonalEjemplo.find(ep => ep.id === especialidadpersonalId);
             if (foundEspecialidadPersonal) {
                 setEspecialidadPersonal(foundEspecialidadPersonal);
                 setId(foundEspecialidadPersonal.id);
@@ -66,7 +66,7 @@ export default function EditarEspecialidadPersonal({ route, navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.title}>{citaId ? "Editar Especialidad personal" : "Crear Nueva Especialidad Personal"}</Text>
+            <Text style={styles.title}>{especialidadpersonalId ? "Editar Especialidad personal" : "Crear Nueva Especialidad Personal"}</Text>
 
             <ScrollView style={styles.formScrollView}>
                 <View style={styles.formCard}>

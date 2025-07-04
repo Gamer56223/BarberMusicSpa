@@ -14,7 +14,7 @@ export default function DetalleEspecialidad({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundEspecialidad = especialidadesEjemplo.find(c => c.id === especialidadId);
+        const foundEspecialidad = especialidadesEjemplo.find(c => e.id === especialidadId);
         setCita(foundEspecialidad);
         setLoading(false);
     }, [especialidadId]); 
@@ -28,7 +28,7 @@ export default function DetalleEspecialidad({ route, navigation }) {
         );
     }
 
-    if (!agendamiento) {
+    if (!especialidad) {
         return (
             <SafeAreaView style={[styles.container, {backgroundColor: '#f0f4f8'}]}>
                 <Text style={[styles.title, {color: '#2c3e50'}]}>Detalle de la Especialidad</Text>

@@ -23,7 +23,7 @@ export default function EditarMusicaPreferencial({ route, navigation }) {
 
     useEffect(() => {
         if (musicapreferencialId) {
-            const foundMusicaPreferencial = musicapreferencialesEjemplo.find(c => c.id === musicapreferencialId);
+            const foundMusicaPreferencial = musicapreferencialesEjemplo.find(mp => mp.id === musicapreferencialId);
             if (foundMusicaPreferencial) {
                 setCategoria(foundMusicaPreferencial);
                 setId(foundMusicaPreferencial.id);

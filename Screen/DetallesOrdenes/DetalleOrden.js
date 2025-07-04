@@ -17,7 +17,7 @@ export default function DetalleOrden({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundDetalleOrden = detalleordenesEjemplo.find(c => c.id === detalleordenId);
+        const foundDetalleOrden = detalleordenesEjemplo.find(c => o.id === detalleordenId);
         setCita(foundDetalleOrden);
         setLoading(false);
     }, [detalleordenId]); 

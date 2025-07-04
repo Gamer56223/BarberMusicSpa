@@ -14,10 +14,10 @@ export default function ListarMusicaPreferencial({ navigation }) {
         <View style={styles.container}>
             <Text style={styles.title}>Listado de Musica Preferencial</Text> 
 
-            <ScrollView style={styles.agendamientosContainer}>
-                {musicapreferencialesEjemplo.map((agendamiento) => (
+            <ScrollView style={styles.musicapreferencialesContainer}>
+                {musicapreferencialesEjemplo.map((musicapreferencial) => (
                     <View key={musicapreferencial.id} style={styles.musicapreferencialCard}>
-                        <Text style={styles.musicapreferencialTitle}>{agendamiento.Nombre}</Text>
+                        <Text style={styles.musicapreferencialTitle}>{musicapreferencial.Nombre}</Text>
                         <Text style={styles.musicapreferencialDetail}><Text style={styles.detailLabel}>Id: </Text>{musicapreferencial.Id}</Text>
                         <Text style={styles.musicapreferencialDetail}><Text style={styles.detailLabel}>Nombre Opción: </Text>{musicapreferencial.Nombre_Opcion}</Text>
                         <Text style={styles.musicapreferencialDetail}><Text style={styles.detailLabel}>Descripción: </Text>{musicapreferencial.Descripcion}</Text>
@@ -33,7 +33,7 @@ export default function ListarMusicaPreferencial({ navigation }) {
                             />
                             <BotonComponent
                                 title="Editar Musica Preferencial" // Título completo
-                                onPress={() => navigation.navigate("Editarmusicapreferenciales", { agendamientoId: agendamiento.id })}
+                                onPress={() => navigation.navigate("Editarmusicapreferenciales", { agendamientoId: musicapreferencial.id })}
                                 buttonStyle={styles.editButton}
                                 textStyle={styles.buttonText}
                             />
@@ -43,9 +43,9 @@ export default function ListarMusicaPreferencial({ navigation }) {
             </ScrollView>
 
             <BotonComponent
-                title="Agendar Nueva agendamiento" // Título completo
+                title="Agendar Nueva Musica Preferencial" // Título completo
                 onPress={() => { /* navigation.navigate("Crearagendamiento") */ }}
-                buttonStyle={styles.newagendamientoButton}
+                buttonStyle={styles.newmusicapreferencialButton}
                 textStyle={styles.buttonText}
             />
         </View>
@@ -65,11 +65,13 @@ const styles = StyleSheet.create({
         marginBottom: 25,
         color: "#2C3E50", // Color de título oscuro
     },
-    agendamientosContainer: {
+    
+    musicapreferencialesContainer: {
         width: "100%", 
         flex: 1, 
     },
-    agendamientoCard: {
+
+    musicapreferencialCard: {
         backgroundColor: "skyblue", // Fondo blanco para cada tarjeta de agendamiento
         borderRadius: 10,
         padding: 15,
@@ -80,14 +82,15 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         elevation: 3, // Elevación para Android
     },
-    agendamientoTitle: {
+
+    musicapreferencialTitle: {
         fontSize: 20,
         fontWeight: "bold",
         marginBottom: 8,
         color: "#34495E", 
     },
     
-    agendamientoDetail: {
+    musicapreferencialDetail: {
         fontSize: 16,
         color: "#5C6F7F", 
         marginBottom: 4,
@@ -118,7 +121,7 @@ const styles = StyleSheet.create({
         minWidth: 120,
         alignItems: 'center',
     },
-    newagendamientoButton: {
+    newmusicapreferencialButton: {
         backgroundColor: "#E67E22", // Naranja para "Agendar Nueva agendamiento"
         paddingVertical: 15,
         paddingHorizontal: 25,

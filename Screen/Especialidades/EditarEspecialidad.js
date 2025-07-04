@@ -24,7 +24,7 @@ export default function EditarEspecialidad({ route, navigation }) {
 
     useEffect(() => {
         if (especialidadId) {
-            const foundEspecialidad = especialidadesEjemplo.find(c => c.id === especialidadId);
+            const foundEspecialidad = especialidadesEjemplo.find(e => e.id === especialidadId);
             if (foundEspecialidad) {
                 setEspecialidad(foundEspecialidad);
                 setId(foundEspecialidad.id);

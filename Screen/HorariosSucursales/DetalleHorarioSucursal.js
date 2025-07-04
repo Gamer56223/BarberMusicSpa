@@ -15,7 +15,7 @@ export default function DetalleHorarioSucursal({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundCita = horariosucursalesEjemplo.find(c => c.id === horariosucursalId);
+        const foundCita = horariosucursalesEjemplo.find(hs => hs.id === horariosucursalId);
         setCita(foundHorarioSucursal);
         setLoading(false);
     }, [horariosucursalId]); 

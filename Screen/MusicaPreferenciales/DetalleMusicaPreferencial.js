@@ -15,7 +15,7 @@ export default function DetalleMusicaPreferencial({ route, navigation }) {
     ];
 
     useEffect(() => {
-        const foundMusicaPreferencial = musicapreferencialesEjemplo.find(c => c.id === musicapreferencialId);
+        const foundMusicaPreferencial = musicapreferencialesEjemplo.find(mp => mp.id === musicapreferencialId);
         setCita(foundMusicaPreferencial);
         setLoading(false);
     }, [musicapreferencialId]); 

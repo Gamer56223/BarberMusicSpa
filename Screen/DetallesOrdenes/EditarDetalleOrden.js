@@ -41,7 +41,7 @@ export default function EditarDetalleOrden({ route, navigation }) {
 
     useEffect(() => {
         if (detalleordenId) {
-            const foundDetalleOrden = detalleordenesEjemplo.find(c => c.id === detalleordenId);
+            const foundDetalleOrden = detalleordenesEjemplo.find(c => o.id === detalleordenId);
             if (foundDetalleOrden) {
                 setDetalleOrden(foundDetalleOrden);
                 setId(foundDetalleOrden.id);
@@ -113,7 +113,7 @@ export default function EditarDetalleOrden({ route, navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.title}>{citaId ? "Editar DetalleOrden" : "Crear Nuevo Detalle Orden"}</Text>
+            <Text style={styles.title}>{detalleordenId ? "Editar DetalleOrden" : "Crear Nuevo Detalle Orden"}</Text>
 
             <ScrollView style={styles.formScrollView}>
                 <View style={styles.formCard}>

@@ -16,8 +16,8 @@ export default function ListarHorarioSucursal({ navigation }) {
 
             <ScrollView style={styles.horariosucursalesContainer}>
                 {horariosucursalesEjemplo.map((horariosucursal) => (
-                    <View key={categoria.id} style={styles.categoriaCard}>
-                        <Text style={styles.horariosucursalTitle}>{categoria.Nombre}</Text>
+                    <View key={horariosucursal.id} style={styles.horariosucursalCard}>
+                        <Text style={styles.horariosucursalTitle}>{horariosucursal.Nombre}</Text>
                         <Text style={styles.horariosucursalDetail}><Text style={styles.detailLabel}>Id: </Text>{horariosucursal.Id}</Text>
                         <Text style={styles.horariosucursalDetail}><Text style={styles.detailLabel}>Dia Semana: </Text>{horariosucursal.Dia_Semana}</Text>
                         <Text style={styles.horariosucursalDetail}><Text style={styles.detailLabel}>Hora Apertura: </Text>{horariosucursal.Hora_Apertura}</Text>
